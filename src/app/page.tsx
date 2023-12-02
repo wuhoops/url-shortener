@@ -63,7 +63,7 @@ const Home = () => {
         }}
         size="large"
         autoFocus
-        placeholder="Enter the link here"
+        placeholder="Enter the full link here"
         className="max-w-xl"
       />
       <Input
