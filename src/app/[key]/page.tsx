@@ -21,7 +21,7 @@ const Page = () => {
         window.location.href = `https://${fullUrl}`;
       }
     });
-  }, []);
+  }, [params.key]);
 
   return (
     <>

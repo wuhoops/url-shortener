@@ -3,7 +3,7 @@ import { Input, Button, message, Spin } from "antd";
 import { useState } from "react";
 import supabase from "@/utils/supabaseInstance";
 
-export default function Home() {
+const Home = () => {
   const [fullLink, setFullLink] = useState("");
   const [shortLink, setShortLink] = useState("");
   const [shortenLink, setShortenLink] = useState("");
@@ -115,4 +115,6 @@ export default function Home() {
       )}
     </main>
   );
-}
+};
+
+export default Home;
