@@ -5,7 +5,7 @@ import Lottie from "lottie-react";
 import redirecting from "../../../public/redirecting.json";
 import supabase from "@/utils/supabaseInstance";
 
-const page = () => {
+const Page = () => {
   const params = useParams();
   useEffect(() => {
     new Promise(async () => {
@@ -37,4 +37,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
