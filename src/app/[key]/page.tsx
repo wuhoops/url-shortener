@@ -15,10 +15,11 @@ const Page = () => {
         .select()
         .eq("shorten_link", params.key);
       if (error) {
+        setIsFound(false);
         console.log(error);
       }
       if (data) {
-        setIsFound(false);
+        setIsFound(true);
         const fullUrl = data[0].full_link.replace("https://", "");
         window.location.href = `https://${fullUrl}`;
       }
