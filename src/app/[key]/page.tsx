@@ -19,9 +19,13 @@ const Page = () => {
         console.log(error);
       }
       if (data) {
-        setIsFound(true);
-        const fullUrl = data[0].full_link.replace("https://", "");
-        window.location.href = `https://${fullUrl}`;
+        if (!data[0]) {
+          setIsFound(false);
+        } else {
+          setIsFound(true);
+          const fullUrl = data[0].full_link.replace("https://", "");
+          window.location.href = `https://${fullUrl}`;
+        }
       }
     });
   }, [params.key]);
